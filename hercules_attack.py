@@ -87,6 +87,25 @@ print("Your enemy's attack method/name will now be chosen randomly.")
 print("")
 random_attack = random.choice(enemy_attack_list)
 print("Enemy attack method will be:", random_attack)
+print("")
+
+
+game_on = input("Are you ready to attack? Please type Y for Yes, or type N for no: ")
+while game_on!= "Y" and game_on!= "N":
+    print("TRY AGAIN. You must enter Y or N to proceed!")
+    game_on = input("Are you ready to attack? Please type Y for Yes, or type N for no: ")
+else:
+    if game_on == "N":
+        print("Agh bummer, you have been hit!!")
+        game_on = input("Are you ready to attack? Please type Y for Yes, or type N for no: ")
+    elif game_on == "Y":
+        print("ATTACK succeeded!")
+        game_on = input("Are you ready to attack? Please type Y for Yes, or type N for no: ")
+
+
+
+
+
 
 
 
