@@ -64,21 +64,20 @@ def attack():
         elif game_on == "Y":
             print("ATTACK succeeded!")
             game_on = input("Are you ready to attack? Please type Y for Yes, or type N for no: ")
-            
-    
+
     return game_on
 
 
 
 #dictionary list of each character (hero, enemies)
 
-hero_dictionary = {"name":"Hercules","health meter":20,"attack power":20}
+hero_dictionary = {"name":"Hercules","health meter":10,"attack power":10}
                   
-enemy1_dictionary = {"name":"Nemean Lion","health meter":20,"attack power":20}
+enemy1_dictionary = {"name":"Nemean Lion","health meter":10,"attack power":10}
                     
-enemy2_dictionary = {"name":"Lernaean Hydra","health meter":20,"attack power":20}
+enemy2_dictionary = {"name":"Lernaean Hydra","health meter":10,"attack power":10}
                     
-enemy3_dictionary = {"name":"Cerberus","health meter":20,"attack power":20}
+enemy3_dictionary = {"name":"Cerberus","health meter":10,"attack power":10}
                      
 enemy_attack_list = ["Fire attack", "Mind attack", "Bite attack", "Laser attack"]
 
@@ -105,7 +104,7 @@ print("")
 random_attack = random.choice(enemy_attack_list)
 print("Enemy attack method will be:", random_attack)
 print("")
-print(f'Be aware of your beginning health capacity, which is at:{20}')
+print(f'Be aware of your beginning health capacity, which is at:{15}')
 print("")
 
 #called attack function:
@@ -113,7 +112,18 @@ attack()
 
 
 #define health capacity
-health_capacity = 20
+count = 10
+while count >=0:
+    print("your health capacity:",count)
+    count -= 5
+
+print("Uh oh! Nice try though!")
+print("GAME OVER")
+
+
+
+
+
 
 
 
