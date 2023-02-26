@@ -1,5 +1,26 @@
 import random
 
+
+#open welcome greeting 
+#created function for greeting
+def get_greeting():
+    print("")
+    print("Hi there, and welcome to the 'Ring of Power'!")
+    print("")
+    print("This is where YOU call the shots, and get to destroy your enemies however you please!")
+    print("Oh yeah, and by the way, you will be HERCULES:Master of the Universe!")
+    print("")
+    print("Pretty cool, right? Ok then, let's get started!")
+#define the 3 potential enemies/threats within greeting
+    print("")
+    print("Let's introduce your enemies:")
+    print("")
+    print("1.Nemean Lion  2.Lernaean Hydra and 3.Cerberus the Dog")
+    print("")
+
+
+
+#created function to ask user for mode of attack preference 
 def get_user_attack():
     user_attack = input("Which attack mode would you like to use against your enemy? 1 or 2: ")
     while user_attack!= "1" and user_attack !="2":
@@ -13,6 +34,36 @@ def get_user_attack():
         
     return user_attack
 
+#created function for user enemy choice
+def get_enemy_choice():
+
+    user_enemy = input("Now, it's time to choose your enemy. Choose 1, 2, or 3: ")
+    while user_enemy!= "1" and user_enemy!= "2" and user_enemy!="3":
+        print("Wrong again! Please choose 1, 2 or 3. ")
+        user_enemy = input("Now, it's time to choose your enemy. Choose 1, 2, or 3: ")
+    else:
+        if user_enemy == "1":
+            print("You have summoned Nemean Lion!")
+        elif user_enemy == "2":
+            print("Lernaean Hydra is on his way!")
+        elif user_enemy == "3":
+            print("Here comes Cerberus!")
+    
+    return user_enemy
+
+
+
+#dictionary list of each character (hero, enemies)
+
+hero_dictionary = {"name":"Hercules","health meter":20,"attack power":20}
+                  
+enemy1_dictionary = {"name":"Nemean Lion","health meter":20,"attack power":20}
+                    
+enemy2_dictionary = {"name":"Lernaean Hydra","health meter":20,"attack power":20}
+                    
+enemy3_dictionary = {"name":"Cerberus","health meter":20,"attack power":20}
+                     
+enemy_attack_list = ["Fire attack", "Mind attack", "Bite attack", "Laser attack"]
 
 
 
@@ -20,74 +71,37 @@ def get_user_attack():
 
 
 
+#called greeting function:
+get_greeting()
 
 
-
-
-
-
-
-
-
-#list of each characteristics
-
-hero_dictionary = {"name:Hercules","health meter:20","attack power:20",
-                  "attack names:Bone crush attack,Boulder attack"}
-enemy1_dictionary = {"name:Nemean Lion","health meter:20","attack power:20",
-                    "attack names:Bite attack","Breath attack"}
-enemy2_dictionary = {"name:Lernaean Hydra","health metter:20","attack power:20",
-                    "attack names:Gaze attack, Touch attack"}
-enemy3_dictionary = {"name:Cerberus","health meter:20","attack power:20",
-                     "attack names:Mind attack,Fear attack"}
-
-
-
-
-
-
-#open welcome greeting 
-print("")
-print("Hi there, and welcome to the 'Ring of Power'!")
-print("")
-print("This is where YOU call the shots, and get to destroy your enemies however you please!")
-print("Oh yeah, and by the way, you will be HERCULES:Master of the Universe!")
-print("")
-
-print("Pretty cool, right? Ok then, let's get started!")
-
-#define 3 potential enemies/threats
-print("")
-print("Let's introduce your enemies:")
-print("")
-print("1.Nemean Lion  2.Lernaean Hydra and 3.Cerberus the Dog")
-print("")
-
-
-
-
-
-
-
-
-# defined user attack function above
-#called user attack function below
+#called user attack function:
 get_user_attack()
 
 
+#called user enemy choice function:
+get_enemy_choice()
 
-        
+import random
+print("Your enemy's attack method/name will now be chosen randomly.")
+print("")
+random_attack = random.choice(enemy_attack_list)
+print("Enemy attack method will be:", random_attack)
 
-user_enemy = input("Now, it's time to choose your enemy. Choose 1, 2, or 3: ")
-while user_enemy!= "1" and user_enemy!= "2" and user_enemy!="3":
-    print("Wrong again! Please choose 1, 2 or 3. ")
-    user_enemy = input("Now, it's time to choose your enemy. Choose 1, 2, or 3: ")
-else:
-    if user_enemy == "1":
-        print("You have summoned Nemean Lion!")
-    elif user_enemy == "2":
-        print("Lernaean Hydra is on his way!")
-    elif user_enemy == "3":
-        print("Here comes Cerberus!")
+
+
+
+
+
+
+              
+      
+
+
+
+
+
+
 
     
 
