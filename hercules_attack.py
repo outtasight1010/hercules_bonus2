@@ -50,6 +50,23 @@ def get_enemy_choice():
             print("Here comes Cerberus!")
     
     return user_enemy
+#created an attack function
+#now user is ready to GO
+def attack():
+
+    game_on = input("Are you ready to attack? Please type Y for Yes, or type N for no: ")
+    while game_on!= "Y" and game_on!= "N":
+        print("TRY AGAIN. You must enter Y or N to proceed!")
+        game_on = input("Are you ready to attack? Please type Y for Yes, or type N for no: ")
+    else:
+        if game_on == "N":
+            print("Agh bummer, you have been hit!!")
+            game_on = input("Are you ready to attack? Please type Y for Yes, or type N for no: ")
+        elif game_on == "Y":
+            print("ATTACK succeeded!")
+            game_on = input("Are you ready to attack? Please type Y for Yes, or type N for no: ")
+    
+    return game_on
 
 
 
@@ -88,19 +105,16 @@ print("")
 random_attack = random.choice(enemy_attack_list)
 print("Enemy attack method will be:", random_attack)
 print("")
+print(f'Be aware of your beginning health capacity, which is:{20}')
+print("")
+
+#called attack function:
+attack()
 
 
-game_on = input("Are you ready to attack? Please type Y for Yes, or type N for no: ")
-while game_on!= "Y" and game_on!= "N":
-    print("TRY AGAIN. You must enter Y or N to proceed!")
-    game_on = input("Are you ready to attack? Please type Y for Yes, or type N for no: ")
-else:
-    if game_on == "N":
-        print("Agh bummer, you have been hit!!")
-        game_on = input("Are you ready to attack? Please type Y for Yes, or type N for no: ")
-    elif game_on == "Y":
-        print("ATTACK succeeded!")
-        game_on = input("Are you ready to attack? Please type Y for Yes, or type N for no: ")
+
+
+
 
 
 
