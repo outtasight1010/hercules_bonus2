@@ -65,6 +65,7 @@ def attack():
         elif game_on == "Y":
             print("ATTACK succeeded!")
             game_on = input("Are you ready to attack? Please type Y for Yes, or type N for no: ")
+        
     
     return game_on
 
@@ -105,11 +106,12 @@ print("")
 random_attack = random.choice(enemy_attack_list)
 print("Enemy attack method will be:", random_attack)
 print("")
-print(f'Be aware of your beginning health capacity, which is:{20}')
+print(f'Be aware of your beginning health capacity, which is at:{20}')
 print("")
 
 #called attack function:
 attack()
+
 
 
 
