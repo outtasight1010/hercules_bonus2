@@ -53,7 +53,6 @@ def get_enemy_choice():
 #created an attack function
 #now user is ready to GO
 def attack():
-
     game_on = input("Are you ready to attack? Please type Y for Yes, or type N for no: ")
     while game_on!= "Y" and game_on!= "N":
         print("TRY AGAIN. You must enter Y or N to proceed!")
@@ -65,7 +64,7 @@ def attack():
         elif game_on == "Y":
             print("ATTACK succeeded!")
             game_on = input("Are you ready to attack? Please type Y for Yes, or type N for no: ")
-        
+            
     
     return game_on
 
@@ -111,6 +110,13 @@ print("")
 
 #called attack function:
 attack()
+
+
+#define health capacity
+health_capacity = 20
+
+
+
 
 
 
